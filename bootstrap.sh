@@ -6,7 +6,6 @@
 #   * Ansible
 
 install_xcode_cli_tools () {
-
     # http://www.mokacoding.com/blog/how-to-install-xcode-cli-tools-without-gui/
 
     printf "\nChecking Xcode Command Line tools\n"
@@ -21,7 +20,7 @@ install_xcode_cli_tools () {
             head -n 1 | awk -F"*" '{print $2}' |
             sed -e 's/^ *//' |
             tr -d '\n')
-        softwareupdate -i "$PROD" -v
+        softwareupdate -i "$PROD" --verbose
         echo "Cleaning up..."
         rm /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress
     else
