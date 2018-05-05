@@ -55,7 +55,12 @@ install_ansible () {
     fi
 }
 
+main () {
+    install_xcode_cli_tools
+    install_homebrew
+    install_ansible
+}
 
-install_xcode_cli_tools
-install_homebrew
-install_ansible
+
+main
+
