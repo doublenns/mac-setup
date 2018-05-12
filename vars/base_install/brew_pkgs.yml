@@ -1,0 +1,10 @@
+brew_pkgs:
+  - ansible
+  - awscli
+  - go
+  - heroku
+  - iperf
+  - python3
+  - terraform
+  - tree
+  - wget  
