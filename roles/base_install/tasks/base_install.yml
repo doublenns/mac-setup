@@ -2,9 +2,9 @@
 # tasks file for mac-setup
 
 - name: Install homebrew packages
-  hoembrew:
-    name: "{{ itewm.name }}"
-    install_options: "{{ item.install_options | default("") }}"
+  homebrew:
+    name: "{{ item.name }}"
+    install_options: "{{ item.install_options | default('') }}"
     state: present
     update_homebrew: no
   with_items: "{{ brew_pkgs }}"
@@ -13,9 +13,9 @@
     - brew
 
 - name: Update existing homebrew packages
-  hoembrew:
-    name: "{{ itewm.name }}"
-    install_options: "{{ item.install_options | default("") }}"
+  homebrew:
+    name: "{{ item.name }}"
+    install_options: "{{ item.install_options | default('') }}"
     state: latest
     update_homebrew: yes
   with_items: "{{ brew_pkgs }}"
@@ -23,10 +23,10 @@
     - update
     - brew
 
-name: Install homebreww casks
+name: Install homebrew casks
   homebrew_cask:
     name: "{{ item.name }}"
-    install_options: "{{ item.install_options | default("") }}"
+    install_options: "{{ item.install_options | default('') }}"
     state: present
     update_homebrew: no
   with_items: "{{ brew_casks }}"
@@ -34,10 +34,10 @@ name: Install homebreww casks
     - install
     - brew-cask
 
-name: Update existing homebreww casks
+name: Update existing homebrew casks
   homebrew_cask:
     name: "{{ item.name }}"
-    install_options: "{{ item.install_options | default("") }}"
+    install_options: "{{ item.install_options | default('') }}"
     state: upgraded
     update_homebrew: yes
   with_items: "{{ brew_casks }}"

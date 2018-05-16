@@ -1,9 +1,11 @@
 brew_casks:
   - atom
   - dash
+  - caffeine
   - docker
   - evernote
   - firefox
+  - flux
   - gitter
   - google-backup-and-sync
   - google-chrome
@@ -11,13 +13,16 @@ brew_casks:
   - postman
   - powershell
   - scroll-reverser
+  - shiftit
   - slack
   - spotify
   - sublime-text
+  - the-unarchiver
   - transmission
   - vagrant
   - virtualbox
-  - visual-studio-code dropbox
+  - visual-studio-code
+  - dropbox
   - virtualbox-extension-pack
   - vlc
   - caskroom/drivers/logitech-gaming-software
