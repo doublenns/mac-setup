@@ -58,3 +58,23 @@
   command: "brew cask cleanup"
   tags:
     - cleanup
+
+- name: Install pip packages
+  pip:
+    name: "{{ item }}"
+    extra_args: "{{ item.extra_args | default('') }}"
+    state: present
+  with_items: "{{ pip_pkgs }}"
+  tags:
+    - install
+    - pip
+
+- name: Update pip packages
+  pip:
+    name: "{{ item }}"
+    extra_args: "{{ item.extra_args | default('') }}"
+    state: latest
+  with_items: "{{ pip_pkgs }}"
+  tags:
+    - update
+    - pip
