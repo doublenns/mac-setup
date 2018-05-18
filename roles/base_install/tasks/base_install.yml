@@ -27,7 +27,7 @@
     - update
     - brew
 
-name: Install homebrew casks
+- name: Install homebrew casks
   homebrew_cask:
     name: "{{ item.name }}"
     install_options: "{{ item.install_options | default('') }}"
@@ -38,7 +38,7 @@ name: Install homebrew casks
     - install
     - brew-cask
 
-name: Update existing homebrew casks
+- name: Update existing homebrew casks
   homebrew_cask:
     name: "{{ item.name }}"
     install_options: "{{ item.install_options | default('') }}"
@@ -49,12 +49,12 @@ name: Update existing homebrew casks
     - update
     - brew-cask
 
-name: Cleanup homebrew
+- name: Cleanup homebrew
   command: "brew cleanup -s"
   tags:
     - cleanup
 
-name: Cleanup homebrew cask
+- name: Cleanup homebrew cask
   command: "brew cask cleanup"
   tags:
     - cleanup
