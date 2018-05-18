@@ -1,6 +1,10 @@
 ---
 # tasks file for mac-setup
 
+- name: Include Homebrew variables
+  include_vars:
+    dir: vars/base_install
+
 - name: Install homebrew packages
   homebrew:
     name: "{{ item.name }}"
