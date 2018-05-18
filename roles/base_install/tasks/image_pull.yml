@@ -1,0 +1,40 @@
+---
+# tasks file for mac-setup
+
+- name: Include image variables
+  include_vars:
+    dir: vars/image_pull
+
+- name: Ensure docker images are available
+  docker:
+    name: "{{ item }}"
+    pull: missing
+  with_items: "{{ docker_images }}"
+  tags:
+    - install
+    - docker
+
+- name: Update docker images to latest version
+  docker:
+    name: "{{ item }}"
+    pull: always
+  with_items: "{{ docker_images }}"
+  tags:
+    - update
+    - docker
+
+- name: Ensure vagrant boxes are available
+  cmd:
+    name: "vagrant box add {{ item }}"
+  with_items: "{{ vagrant_images }}"
+  tags:
+    - install
+    - vagrant
+
+- name: Update vagrant boxes to latest version
+  cmd:
+    name: "vagrant box update {{ item }}"
+  with_items: "{{ vagrant_images }}"
+  tags:
+    - install
+    - vagrant
