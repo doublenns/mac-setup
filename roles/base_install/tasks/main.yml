@@ -1,2 +1,3 @@
 ---
 # tasks file for mac-setup
+- include: base_install.yml
