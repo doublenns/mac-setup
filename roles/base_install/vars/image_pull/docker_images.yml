@@ -17,6 +17,5 @@ docker_images:
   - rabbitmq
   - redis
   - ruby
-  - scratch
   - ubuntu
   - vault
