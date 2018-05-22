@@ -16,14 +16,14 @@
 
 - name: Ensure vagrant boxes are available
   command: vagrant box add "{{ item }}"
-  with_items: "{{ vagrant_images }}"
+  with_items: "{{ vagrant_boxes }}"
   tags:
     - install
     - vagrant
 
 - name: Update vagrant boxes to latest version
   command: vagrant box update "{{ item }}"
-  with_items: "{{ vagrant_images }}"
+  with_items: "{{ vagrant_boxes }}"
   tags:
     - install
     - vagrant
