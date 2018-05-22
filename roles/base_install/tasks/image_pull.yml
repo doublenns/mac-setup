@@ -18,7 +18,6 @@
   shell: vagrant box list | grep "{{ item }}" | cat
   register: existing_vagrant_boxes
   with_items: "{{ vagrant_boxes }}"
-  ignore_errors: yes
   changed_when: False
 
 - name: Ensure vagrant boxes are available
