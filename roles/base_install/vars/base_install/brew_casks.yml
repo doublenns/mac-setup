@@ -10,6 +10,7 @@ brew_casks:
   - google-backup-and-sync
   - google-chrome
   - iterm2
+  - microsoft-office
   - postman
   - powershell
   - scroll-reverser
