@@ -1,9 +1,11 @@
 brew_pkgs:
   - ansible
   - awscli
+  - cfssl
   - go
   - heroku
   - iperf
+  - kubernetes-cli
   - python3
   - terraform
   - tree

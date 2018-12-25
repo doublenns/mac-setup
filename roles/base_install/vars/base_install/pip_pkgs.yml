@@ -3,3 +3,12 @@ pip_pkgs:
   - speedtest-cli
   - boto3
   - youtube-dl
+  - flake8
+  - pylint
+  - pyflakes
+  - six
+  - urllib3
+  - pssh
+  - virtualenv
+  - virtualenv-clone
+  - virtualenvwrapper
