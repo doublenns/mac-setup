@@ -59,6 +59,7 @@
     name: "{{ item }}"
     extra_args: "{{ item.extra_args | default('') }}"
     state: present
+    extra_args: --user
   with_items: "{{ pip_pkgs }}"
   tags:
     - install
