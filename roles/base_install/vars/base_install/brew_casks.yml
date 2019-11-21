@@ -22,4 +22,4 @@ brew_casks:
   - dropbox
   - virtualbox-extension-pack
   - vlc
-  - caskroom/drivers/logitech-gaming-software
+  - homebrew/cask-drivers/logitech-gaming-software
