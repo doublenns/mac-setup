@@ -1,13 +1,10 @@
 brew_casks:
   - atom
   - dash
-  - caffeine
   - docker
   - evernote
   - firefox
-  - flux
   - gitter
-  - google-backup-and-sync
   - google-chrome
   - iterm2
   - microsoft-office
@@ -19,7 +16,6 @@ brew_casks:
   - spotify
   - sublime-text
   - the-unarchiver
-  - transmission
   - vagrant
   - virtualbox
   - visual-studio-code

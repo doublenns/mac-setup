@@ -3,7 +3,6 @@ brew_pkgs:
   - awscli
   - cfssl
   - go
-  - heroku
   - iperf
   - kubernetes-cli
   - python3
