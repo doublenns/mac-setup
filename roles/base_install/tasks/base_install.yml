@@ -54,6 +54,11 @@
   tags:
     - cleanup
 
+- name: Cleanup homebrew cask
+  command: "brew cask cleanup"
+  tags:
+    - cleanup
+
 - name: Install pip packages
   pip:
     name: "{{ item }}"
