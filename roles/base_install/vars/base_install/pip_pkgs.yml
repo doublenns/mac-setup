@@ -2,6 +2,7 @@ pip_pkgs:
   - requests
   - speedtest-cli
   - boto3
+  - docker
   - flake8
   - pylint
   - pyflakes
