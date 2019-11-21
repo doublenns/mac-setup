@@ -2,7 +2,6 @@ pip_pkgs:
   - requests
   - speedtest-cli
   - boto3
-  - youtube-dl
   - flake8
   - pylint
   - pyflakes
