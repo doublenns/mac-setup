@@ -4,7 +4,6 @@ brew_pkgs:
   - cfssl
   - go
   - iperf
-  - kubernetes-cli
   - python3
   - terraform
   - tree
