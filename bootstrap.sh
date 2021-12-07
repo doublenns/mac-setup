@@ -3,6 +3,8 @@
 # Sets up requirements to provision w/ Ansible
 #   * Xcode CLI tools
 #   * Homebrew
+#   * MAS (Mac App Store) CLI
+#   * GitHub CLI
 #   * Ansible
 
 install_xcode_cli_tools () {
@@ -43,6 +45,32 @@ install_homebrew () {
 }
 
 
+install_mas_cli () {
+    printf "\nChecking MAS (Mac App Store) CLI\n"
+    # See if the `mas` command exists yet
+    which mas &> /dev/null
+    if [ $? -ne 0 ]; then
+        echo "Installing MAS (Mac App Store) CLI..."
+        brew install mas
+    else
+        echo "MAS (Mac App Store) CLI Ok"
+    fi
+}
+
+
+install_github_cli () {
+    printf "\nChecking GitHub CLI\n"
+    # See if the `gh` command exists yet
+    which gh &> /dev/null
+    if [ $? -ne 0 ]; then
+        echo "Installing GitHub CLI..."
+        brew install gh
+    else
+        echo "GitHub CLI Ok"
+    fi
+}
+
+
 install_ansible () {
     printf "\nChecking Ansible\n"
     # See if the `ansible` command exists yet
@@ -58,6 +86,8 @@ install_ansible () {
 main () {
     install_xcode_cli_tools
     install_homebrew
+    install_mas_cli
+    install_github_cli
     install_ansible
 }
 
