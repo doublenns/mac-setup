@@ -85,6 +85,7 @@ install_ansible () {
 
 
 install_rosetta2 () {
+    echo ""
     if [[ `uname -m` == 'arm64' ]]; then
         echo "Apple Silicon machine detected. Installing Rosetta 2..."
         echo "Computer password required for Rosetta 2 installation:"
