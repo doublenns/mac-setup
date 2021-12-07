@@ -1,10 +1,19 @@
 brew_pkgs:
   - ansible
+  - ansible-lint
   - awscli
   - cfssl
+  - exercism
   - go
+  - golangci-lint
   - iperf
+  - jq
+  - node
   - python3
+  - serverless
+  - speedtest-cli
   - terraform
   - tree
-  - wget  
+  - typescript
+  - wget
+  - yarn
