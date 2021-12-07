@@ -10,10 +10,8 @@ brew_casks:
   - google-chrome
   - google-drive
   - iterm2
-  - logitech-gaming-software
   - microsoft-office
   - microsoft-teams
-  - philips-hue-sync
   - pop
   - postman
   - powershell
@@ -29,3 +27,5 @@ brew_casks:
   - visual-studio-code
   - vlc
   - zoom
+  - homebrew/cask-drivers/philips-hue-sync
+  - homebrew/cask-drivers/logitech-gaming-software
