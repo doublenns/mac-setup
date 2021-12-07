@@ -18,18 +18,18 @@
     - install
     - docker
 
-- name: Check if Vagrant boxes exist
-  shell: vagrant box list | grep "{{ item }}" | cat
-  register: existing_vagrant_boxes
-  with_items: "{{ vagrant_boxes }}"
-  changed_when: False
+# - name: Check if Vagrant boxes exist
+#   shell: vagrant box list | grep "{{ item }}" | cat
+#   register: existing_vagrant_boxes
+#   with_items: "{{ vagrant_boxes }}"
+#   changed_when: False
 
-- name: Ensure vagrant boxes are available
-  command: "vagrant box add {{ item.item }} --provider virtualbox"
-  with_items: "{{ existing_vagrant_boxes.results }}"
-  environment:
-    VAGRANT_DETECTED_OS: Darwin
-  when: not item.stdout
-  tags:
-    - install
-    - vagrant
+# - name: Ensure vagrant boxes are available
+#   command: "vagrant box add {{ item.item }} --provider virtualbox"
+#   with_items: "{{ existing_vagrant_boxes.results }}"
+#   environment:
+#     VAGRANT_DETECTED_OS: Darwin
+#   when: not item.stdout
+#   tags:
+#     - install
+#     - vagrant
