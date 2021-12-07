@@ -83,12 +83,26 @@ install_ansible () {
     fi
 }
 
+
+install_rosetta2 () {
+    if [[ `uname -m` == 'arm64' ]]; then
+        echo "Apple Silicon machine detected. Installing Rosetta 2..."
+        echo "Computer password required for Rosetta 2 installation:"
+        sudo /usr/sbin/softwareupdate --install-rosetta --agree-to-license
+    else
+        echo "No Apple Silicon detected. Skipping Rosetta 2 installation..."
+        return
+    fi
+}
+
+
 main () {
     install_xcode_cli_tools
     install_homebrew
     install_mas_cli
     install_github_cli
     install_ansible
+    install_rosetta2
 }
 
 
