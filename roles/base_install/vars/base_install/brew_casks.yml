@@ -1,10 +1,7 @@
 brew_casks:
   - atom
-  - dash
   - docker
-  - evernote
   - firefox
-  - gitter
   - google-chrome
   - iterm2
   - microsoft-office
