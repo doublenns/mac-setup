@@ -4,6 +4,10 @@
 - name: Include image variables
   include_vars:
     dir: vars/image_pull
+  tags:
+    - install
+    - docker
+    - vagrant
 
 - name: Ensure docker images are available
   docker_image:

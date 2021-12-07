@@ -1,9 +1,17 @@
 ---
 # tasks file for mac-setup
 
-- name: Include Homebrew variables
+- name: Include Homebrew and Pip variables
   include_vars:
     dir: vars/base_install
+  tags:
+    - install
+    - update
+    - brew
+    - brew-cask
+    - docker
+    - pip
+    - vagrant
 
 - name: Install homebrew packages
   homebrew:
