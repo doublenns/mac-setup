@@ -28,4 +28,3 @@ brew_casks:
   - vlc
   - zoom
   - homebrew/cask-drivers/philips-hue-sync
-  - homebrew/cask-drivers/logitech-gaming-software
