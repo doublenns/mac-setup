@@ -1,13 +1,14 @@
 ---
 # tasks file for mac-setup
 
-- name: Include Homebrew and Pip variables
+- name: Include Homebrew, MAS CLI and Pip variables
   include_vars:
     dir: vars/base_install
   tags:
     - install
     - update
     - brew
+    - mas
     - brew-cask
     - docker
     - pip
@@ -61,6 +62,22 @@
   command: "brew cleanup -s"
   tags:
     - cleanup
+
+- name: Install Mac App Store Apps
+  mas:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ mas_apps }}"
+  tags:
+    - install
+    - mas
+
+- name: Upgrade all installed Mac App Store apps
+  mas:
+    upgrade_all: yes
+  tags:
+    - update
+    - mas
 
 - name: Install pip packages
   pip:
