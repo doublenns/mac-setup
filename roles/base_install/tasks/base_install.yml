@@ -65,7 +65,7 @@
 
 - name: Install Mac App Store Apps
   mas:
-    name: "{{ item }}"
+    id: "{{ item }}"
     state: present
   with_items: "{{ mas_apps }}"
   tags:
