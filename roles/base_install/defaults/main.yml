@@ -1,4 +1,0 @@
----
-# defaults file for mac-setup
-
-vagrant_provider: virtualbox

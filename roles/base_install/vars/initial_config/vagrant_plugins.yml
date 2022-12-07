@@ -1,3 +1,0 @@
-vagrant_plugins:
-  - vagrant-scp
-  - vagrant-share

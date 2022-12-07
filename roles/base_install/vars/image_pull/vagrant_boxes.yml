@@ -1,5 +1,0 @@
-vagrant_boxes:
-  - ubuntu/xenial64
-  - centos/7
-  - centos/6
-  - jhcook/macos-sierra

@@ -21,9 +21,6 @@ brew_casks:
   - steam
   - sublime-text
   - the-unarchiver
-  - vagrant
-  # - virtualbox
-  # - virtualbox-extension-pack
   - visual-studio-code
   - vlc
   - zoom
